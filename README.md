@@ -18,4 +18,4 @@ In Contentful, configure your personal access token. You're going to enter that 
 You can either execute the script manually, or you can set up a cron job or some other type of scheduler to run back-ups. 
 
 ## How does it work?
-The shell script will first execute the Python program. With the Content Management API, all environments
+The shell script will first execute the Python program. With the Content Management API, all environment ID's are retrieved from your space, and dumped in a txt file. Then the shell script looks at that txt file, and loops over each line of the txt file to fill in the environment ID as a variable for the Contentful CLI. Lastly, it retrieves today's date and stamps that date in the filename of your export json file. 
